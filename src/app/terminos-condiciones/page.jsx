@@ -5,7 +5,7 @@ const TerminosCondiciones = () => {
     <div className="px-20 py-20">
       <p className="text-center mb-10 text-xl">TÉRMINOS Y CONDICIONES</p>
       <p className="text-gray-800 text-base text-justify">
-        Bienvenido/a a nuestra aplicación de <b>Ahí-Llego</b> ("la Aplicación").
+        Bienvenido/a a nuestra aplicación de <b>Ahí-Llego</b> (la Aplicación).
         Al acceder, navegar y utilizar la Aplicación, usted acepta los términos
         y condiciones de uso que se describen a continuación. Si no está de
         acuerdo con estos términos y condiciones, por favor no utilice la

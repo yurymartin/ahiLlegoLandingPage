@@ -37,12 +37,14 @@ export default function Main() {
           </div>
         </div>
         <div className="xl:mr-44 sm:mr-0 sm:mb-28 mb-0 lg:mb-0 mr-48 md:pl-10">
-          <img
-            className="w-80 md:ml-1 ml-24"
-            alt="iPhone-12"
+          <Image
             // src="/images/iPhone-12-Mockup.png"
             src="/images/phone.png"
-          ></img>
+            className="w-80 md:ml-1 ml-24"
+            alt="iPhone-12"
+            width={80}
+            height={100}
+          />
         </div>
       </div>
       <section className="mx-auto">
@@ -57,33 +59,6 @@ export default function Main() {
                 height={500}
               />
             </div>
-            {/* <div className="flex items-center justify-center">
-              <Image
-                src="/images/Shopify-Logo.svg"
-                alt="Shopify Logo"
-                className="block object-contain h-16 greyC"
-                width={500}
-                height={500}
-              />
-            </div>
-            <div className="flex items-center justify-center">
-              <Image
-                src="/images/Cloudflare-Logo.svg"
-                alt="Cloudflare Logo"
-                className="block object-contain h-16 greyC"
-                width={500}
-                height={500}
-              />
-            </div>
-            <div className="flex items-center justify-center">
-              <Image
-                src="/images/PayPal-Logo.png"
-                alt="Paypal Logo"
-                className="block object-contain h-16 greyC"
-                width={500}
-                height={500}
-              />
-            </div> */}
           </div>
         </div>
       </section>
@@ -95,11 +70,13 @@ export default function Main() {
           Minify your CSS with Tailwind's built in PostCSS support.
         </h1>
         <div className="container flex flex-col items-center justify-center mx-auto rounded-lg ">
-          <img
+          <Image
             className="object-cover object-center w-3/4 mb-10 g327 border rounded-lg shadow-md"
             alt="Placeholder Image"
-            src="./images/placeholder.png"
-          ></img>
+            src="/images/placeholder.png"
+            width={500}
+            height={500}
+          />
         </div>
       </div>
       <section className="relative">
