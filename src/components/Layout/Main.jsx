@@ -1,11 +1,25 @@
 import Image from "next/image";
+import FormContact from "./../FormContact";
+import Cities from "../Cities";
 import Link from "next/link";
-import FormContact from "./FormContact";
+
+const companies = [
+  // {
+  //   id: 1,
+  //   name: "Google",
+  //   photo: "/images/companies/Google-Logo.webp",
+  // },
+  {
+    id: 1,
+    name: "24/7",
+    photo: "/images/companies/24_7.png",
+  },
+];
 
 export default function Main() {
   return (
-    <section className="text-gray-600 body-font ">
-      <div className="max-w-7xl mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+    <section className="text-gray-600 body-font">
+      <div className="max-w-10xl mx-auto flex py-24 md:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-1/2 md:ml-24 pt-6 flex flex-col md:items-start md:text-left mb-40 items-center text-center">
           <h1 className="mb-5 sm:text-6xl text-5xl items-center Avenir xl:w-2/2 text-gray-900">
             "Lo que quieras, donde quieras, en minutos."
@@ -20,12 +34,13 @@ export default function Main() {
             <Link href={"/"}>
               <Image
                 src="/images/google-play-button.svg"
-                alt="Google Logo"
-                className="mr-5 hover:opacity-60"
+                alt="PlayStore"
+                className="mr-5 hover:opacity-60 hover:scale-105"
                 width={160}
                 height={100}
               />
             </Link>
+
             {/* <Link href={"/"}>
               <Image
                 src="/images/app_store_button.svg"
@@ -40,7 +55,7 @@ export default function Main() {
           <Image
             // src="/images/iPhone-12-Mockup.png"
             src="/images/phone.png"
-            className="w-80 md:ml-1 ml-24"
+            className="w-80 md:ml-1 ml-24 hover:scale-110"
             alt="iPhone-12"
             width={80}
             height={100}
@@ -48,37 +63,24 @@ export default function Main() {
         </div>
       </div>
       <section className="mx-auto">
-        <div className="container px-5 mx-auto lg:px-24 ">
+        <div className="container px-5 mx-auto">
           <div className="grid grid-cols-2 gap-16 mb-16 text-center lg:grid-cols-4">
-            <div className="flex items-center justify-center">
-              <Image
-                src="/images/Google-Logo.webp"
-                alt="Google Logo"
-                className="block object-contain h-16 greyC"
-                width={500}
-                height={500}
-              />
-            </div>
+            {companies.map((item, index) => (
+              <div className="flex items-center justify-center">
+                <Image
+                  key={index}
+                  src={item.photo}
+                  alt={item.name}
+                  className="w-42 h-40 object-contain greyC"
+                  width={500}
+                  height={500}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
-      <div className="grr max-w-7xl pt-20 mx-auto text-center">
-        <h1 className="mb-8 text-6xl Avenir font-semibold text-gray-900">
-          Less code, less effort.
-        </h1>
-        <h1 className="mb-8 text-2xl Avenir font-semibold text-gray-600 text-center">
-          Minify your CSS with Tailwind's built in PostCSS support.
-        </h1>
-        <div className="container flex flex-col items-center justify-center mx-auto rounded-lg ">
-          <Image
-            className="object-cover object-center w-3/4 mb-10 g327 border rounded-lg shadow-md"
-            alt="Placeholder Image"
-            src="/images/placeholder.png"
-            width={500}
-            height={500}
-          />
-        </div>
-      </div>
+      <Cities />
       <section className="relative">
         <FormContact />
       </section>
