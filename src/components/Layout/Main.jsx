@@ -66,9 +66,8 @@ export default function Main() {
         <div className="container px-5 mx-auto">
           <div className="grid grid-cols-2 gap-16 mb-16 text-center lg:grid-cols-4">
             {companies.map((item, index) => (
-              <div className="flex items-center justify-center">
+              <div key={index} className="flex items-center justify-center">
                 <Image
-                  key={index}
                   src={item.photo}
                   alt={item.name}
                   className="w-42 h-40 object-contain greyC"
